@@ -1,0 +1,10 @@
+#canvas {
+    width: 99%;
+    height: 99%;
+    float: left;
+    max-height: 80vh;
+}
+
+body{
+    background-color: black;
+}
