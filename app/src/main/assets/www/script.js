@@ -2,7 +2,7 @@ var cvs = document.getElementById("canvas");
 var ctx = cvs.getContext("2d");
 
 cvs.width = 288;
-cvs.height = 512;
+cvs.height = window.innerHeight;;
 
 
 var bird = new Image();
@@ -65,8 +65,8 @@ var stopGame = true;
 function drawWin() {
     ctx.font = "26px Arial";
     ctx.fillStyle = "blue";
-    ctx.fillText("Игра закончена", canvas.width / 2 - 100, cvs.height - 55);
-    ctx.fillText("Счет: " + score, canvas.width / 2 - 60, cvs.height - 20);
+    ctx.fillText("Игра закончена", canvas.width / 2 - 110, 540);
+    ctx.fillText("Счет: " + score, canvas.width / 2 - 60, 580);
 
 }
 
@@ -104,7 +104,7 @@ function draw() {
             score_audio.play();
         }
     }
-        ctx.drawImage(fg, 0, cvs.height - fg.height);
+        ctx.drawImage(fg, 0, 500);
 
 
 
@@ -112,7 +112,7 @@ function draw() {
     if (stopGame){
     ctx.fillStyle = "#000";
     ctx.font = "24px Verdana";
-    ctx.fillText("Счет: " + score, 10, cvs.height - 20);
+    ctx.fillText("Счет: " + score, 10, 510);
 
         requestAnimationFrame(draw);
     }
